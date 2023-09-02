@@ -5,7 +5,7 @@ Fibonacci API
 Fibonacci API will implement and deploy an API that calculates the n-th Fibonacci number
 for a given input number n.
 
-📖 Documentation is available at [Docs](docs/_build/html/index.html)
+📖 Documentation is available at [Docs](https://fatemetardasti96.github.io/fibonacci-api/)
 
 
 Start the server on your localhost by building a docker image and run it:
