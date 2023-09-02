@@ -30,7 +30,7 @@ Install project from source by running:
 
     cd fibonacci_api_peoject
     pip install -r requirements.txt
-    uvicorn src.fib.main:app --host 0.0.0.0 --port 81 --reload
+    uvicorn src.fibonacci_api.main:app --host 0.0.0.0 --port 81 --reload
 
 API Endpoints
 -------------
