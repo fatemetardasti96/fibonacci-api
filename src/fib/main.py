@@ -1,5 +1,8 @@
 from functools import lru_cache
-from fastapi import FastAPI, HTTPException, status
+
+from fastapi import FastAPI
+from fastapi import HTTPException
+from fastapi import status
 
 
 app = FastAPI()
@@ -29,17 +32,21 @@ def calculate_fibonacci_num_iterative(n):
         return b
 
 
-@app.get("/")
+@app.get('/')
 def get_nth_num_recursive(n):
     if not n.isdigit():
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Enter Integer!")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail='Enter Integer!'
+        )
     val = calculate_fibonacci_num(int(n))
     return val
 
 
-@app.get("/iterative")
+@app.get('/iterative')
 def get_nth_num_iterative(n):
     if not n.isdigit():
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Enter Integer!")
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail='Enter Integer!'
+        )
     val = calculate_fibonacci_num_iterative(int(n))
     return val

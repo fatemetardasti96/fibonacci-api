@@ -3,7 +3,7 @@ Fibonacci API
 ========
 
 Fibonacci API will implement and deploy an API that calculates the n-th Fibonacci number
-for a given input number n. 
+for a given input number n.
 
 📖 Documentation is available at [Docs](docs/_build/html/index.html)
 
@@ -54,7 +54,7 @@ Access API docs from
 
     0.0.0.0:81/docs
 
-Before contributing code, please set up the pre-commit hooks to reduce errors 
+Before contributing code, please set up the pre-commit hooks to reduce errors
 and ensure consistency
 
     pip install -U pre-commit && pre-commit install
