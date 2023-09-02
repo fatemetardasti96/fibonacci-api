@@ -1,5 +1,59 @@
-This is an implementation and deployment of an API that calculates the n-th Fibonacci number for a
-given input number n.
 
-## How to Run
+Fibonacci API
+========
 
+Fibonacci API will implement and deploy an API that calculates the n-th Fibonacci number
+for a given input number n.
+
+Look how easy it is to use:
+
+Start the server on your localhost by building a docker image and run it:
+
+    cd fibonacci_api_peoject
+    docker build -t fibonacci_api .
+    docker run fibonacci_api
+
+You can now find the n-th fibonacci number by sending a ewquest to the server:
+
+    curl http://0.0.0.0:81/?n=7
+
+
+
+Installation
+------------
+
+Install project from source by running:
+
+    cd fibonacci_api_peoject
+    pip install -r requirements.txt
+    uvicorn src.fib.main:app --host 0.0.0.0 --port 81 --reload
+
+Contribute
+----------
+To set up your local development environment, please use a fresh virtual environment,
+then run
+
+    pip install -r requirements-dev.txt
+
+We use pytest as test framework. To execute the tests, please run
+
+    pytest
+
+Before contributing code, please set up the pre-commit hooks to reduce errors 
+and ensure consistency
+
+    pip install -U pre-commit && pre-commit install
+
+- Issue Tracker: github.com/fatemetardasti96/fibonacci-api/issues
+- Source Code: github.com/fatemetardasti96/fibonacci-api
+
+Support
+-------
+
+If you are having issues, please let us know.
+We have a mailing list located at: ftardasti96@gmail.com
+
+License
+-------
+
+The project is licensed under the BSD license.
