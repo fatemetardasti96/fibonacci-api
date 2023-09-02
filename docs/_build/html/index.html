@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to Fibonacci API’s documentation! &#8212; fibonacci_api September 2023 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=3284b99e"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-fibonacci-api-s-documentation">
+<h1>Welcome to Fibonacci API’s documentation!<a class="headerlink" href="#welcome-to-fibonacci-api-s-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>The Fibonacci sequence is a set of numbers in which each number is the sum of the two
+preceding ones. The sequence typically starts with 1 and 1. So, the first few numbers
+in the Fibonacci sequence are 1, 1, 2, 3, 5, 8, 13, and so on.</p>
+<p>Fibonacci API implements and deploys an API that calculates the n-th Fibonacci number
+for a given input number n.</p>
+<p>First of start the server on the localhost by building a docker image and run it:</p>
+<blockquote>
+<div><p>cd fibonacci_api_peoject
+docker build -t fibonacci_api .
+docker run fibonacci_api</p>
+</div></blockquote>
+<p>You can now find the n-th fibonacci number by sending a request to the server:</p>
+<blockquote>
+<div><p>curl <a class="reference external" href="http://0.0.0.0:81/?n=7">http://0.0.0.0:81/?n=7</a></p>
+</div></blockquote>
+<p>OR</p>
+<blockquote>
+<div><p>curl <a class="reference external" href="http://0.0.0.0:81/iterative/?n=7">http://0.0.0.0:81/iterative/?n=7</a></p>
+</div></blockquote>
+<p>The first url finds the n-th number based on a recursive algorithm. And the seond url
+works based on an iterative algorithm.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
+<p>Install project and run the server from source by running:</p>
+<blockquote>
+<div><p>cd fibonacci_api_peoject
+pip install -r requirements.txt
+uvicorn src.fib.main:app –host 0.0.0.0 –port 81 –reload</p>
+</div></blockquote>
+</section>
+<section id="contribute">
+<h2>Contribute<a class="headerlink" href="#contribute" title="Link to this heading">¶</a></h2>
+<p>To set up your local development environment, please use a fresh virtual environment,
+then run</p>
+<blockquote>
+<div><p>pip install -r requirements-dev.txt</p>
+</div></blockquote>
+<p>We use pytest as test framework. To execute the tests, please run</p>
+<blockquote>
+<div><p>pytest</p>
+</div></blockquote>
+<p>Before contributing code, please set up the pre-commit hooks to reduce errors
+and ensure consistency</p>
+<blockquote>
+<div><p>pip install -U pre-commit &amp;&amp; pre-commit install</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Issue Tracker: github.com/fatemetardasti96/fibonacci-api/issues</p></li>
+<li><p>Source Code: github.com/fatemetardasti96/fibonacci-api</p></li>
+</ul>
+</section>
+<section id="support">
+<h2>Support<a class="headerlink" href="#support" title="Link to this heading">¶</a></h2>
+<p>If you are having issues, please let us know.
+We have a mailing list located at: <a class="reference external" href="mailto:ftardasti96&#37;&#52;&#48;gmail&#46;com">ftardasti96<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">¶</a></h2>
+<p>The project is licensed under the BSD license.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">fibonacci_api</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Fateme Tardasti.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
