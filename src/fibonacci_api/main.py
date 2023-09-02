@@ -42,7 +42,7 @@ def get_nth_num_recursive(n):
     return val
 
 
-@app.get('/iterative')
+@app.get('/iterative/')
 def get_nth_num_iterative(n):
     if not n.isdigit():
         raise HTTPException(
