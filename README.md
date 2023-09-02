@@ -8,11 +8,11 @@ for a given input number n.
 📖 Documentation is available at [Docs](https://fatemetardasti96.github.io/fibonacci-api/)
 
 
-Start the server on your localhost by building a docker image and run it:
+Start the server on your localhost by building a docker image and run it on port 81:
 
     cd fibonacci_api_peoject
     docker build -t fibonacci_api .
-    docker run fibonacci_api
+    docker run -p 81:8081 fibonacci_api
 
 You can now find the n-th fibonacci number by sending a request to the server:
 
@@ -57,7 +57,7 @@ Access API docs from
 Before contributing code, please set up the pre-commit hooks to reduce errors
 and ensure consistency
 
-    pip install -U pre-commit && pre-commit install
+    pre-commit run -a
 
 - Issue Tracker: github.com/fatemetardasti96/fibonacci-api/issues
 - Source Code: github.com/fatemetardasti96/fibonacci-api

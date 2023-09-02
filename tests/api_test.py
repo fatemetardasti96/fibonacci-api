@@ -1,7 +1,5 @@
-from __future__ import annotations
-
 from fastapi.testclient import TestClient
-from fib.main import app
+from fibonacci_api.main import app
 
 client = TestClient(app)
 
