@@ -1,23 +1,12 @@
-.. fibonacci_api documentation master file, created by
-   sphinx-quickstart on Sat Sep  2 10:35:54 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Welcome to Fibonacci API's documentation!
-=========================================
+Fibonacci API
+========
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Fibonacci API will implement and deploy an API that calculates the n-th Fibonacci number
+for a given input number n. 
 
-The Fibonacci sequence is a set of numbers in which each number is the sum of the two
-preceding ones. The sequence typically starts with 1 and 1. So, the first few numbers 
-in the Fibonacci sequence are 1, 1, 2, 3, 5, 8, 13, and so on.
 
-Fibonacci API implements and deploys an API that calculates the n-th Fibonacci number
-for a given input number n.
-
-First of start the server on the localhost by building a docker image and run it:
+Start the server on your localhost by building a docker image and run it:
 
     cd fibonacci_api_peoject
     docker build -t fibonacci_api .
@@ -31,18 +20,22 @@ OR
 
     curl http://0.0.0.0:81/iterative/?n=7
 
-The first url finds the n-th number based on a recursive algorithm. And the seond url
-works based on an iterative algorithm.
-
 
 Installation
 ------------
 
-Install project and run the server from source by running:
+Install project from source by running:
 
     cd fibonacci_api_peoject
     pip install -r requirements.txt
     uvicorn src.fib.main:app --host 0.0.0.0 --port 81 --reload
+
+API Endpoints
+-------------
+[`GET /`] This endpoint uses the recursive algorithm to find the n-th number of the series.
+
+[`GET /iterative`] This endpoint uses the iterative algorithm to find the n-th number of the series.
+
 
 Contribute
 ----------
@@ -54,6 +47,10 @@ then run
 We use pytest as test framework. To execute the tests, please run
 
     pytest
+
+Access API docs from
+
+    0.0.0.0:81/docs
 
 Before contributing code, please set up the pre-commit hooks to reduce errors 
 and ensure consistency
