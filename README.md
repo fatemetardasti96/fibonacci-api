@@ -20,7 +20,7 @@ You can now find the n-th fibonacci number by sending a request to the server:
 
 OR
 
-    curl http://0.0.0.0:81/iterative/?n=7
+    curl http://0.0.0.0:81/recursive/?n=7
 
 
 Installation
@@ -34,9 +34,9 @@ Install project from source by running:
 
 API Endpoints
 -------------
-[`GET /`] This endpoint uses the recursive algorithm to find the n-th number of the series.
+[`GET /`] This endpoint uses the iterative algorithm to find the n-th number of the series.
 
-[`GET /iterative`] This endpoint uses the iterative algorithm to find the n-th number of the series.
+[`GET /recursive`] This endpoint uses the recursive algorithm to find the n-th number of the series.
 
 
 Contribute

@@ -16,9 +16,9 @@ Here two algorithms are implemented: recursive and iterative.
 
 API Endpoints
 -------------
-[`GET /`] This endpoint uses the recursive algorithm to find the n-th number of the series.
+[`GET /`] This endpoint uses the iterative algorithm to find the n-th number of the series.
 
-[`GET /iterative`] This endpoint uses the iterative algorithm to find the n-th number of the series.
+[`GET /recursive`] This endpoint uses the recursive algorithm to find the n-th number of the series.
 
 
 Access API docs from

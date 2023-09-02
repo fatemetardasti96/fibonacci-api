@@ -33,20 +33,20 @@ def calculate_fibonacci_num_iterative(n):
 
 
 @app.get('/')
-def get_nth_num_recursive(n):
-    if not n.isdigit():
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST, detail='Enter Integer!'
-        )
-    val = calculate_fibonacci_num(int(n))
-    return val
-
-
-@app.get('/iterative/')
 def get_nth_num_iterative(n):
     if not n.isdigit():
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST, detail='Enter Integer!'
         )
     val = calculate_fibonacci_num_iterative(int(n))
+    return val
+
+
+@app.get('/recursive/')
+def get_nth_num_recursive(n):
+    if not n.isdigit():
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail='Enter Integer!'
+        )
+    val = calculate_fibonacci_num(int(n))
     return val
