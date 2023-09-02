@@ -35,6 +35,13 @@ The first url finds the n-th number based on a recursive algorithm. And the seon
 works based on an iterative algorithm.
 
 
+API Endpoints
+-------------
+[`GET /`] This endpoint uses the recursive algorithm to find the n-th number of the series.
+
+[`GET /iterative`] This endpoint uses the iterative algorithm to find the n-th number of the series.
+
+
 Installation
 ------------
 

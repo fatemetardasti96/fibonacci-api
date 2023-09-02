@@ -5,9 +5,8 @@ Fibonacci API
 Fibonacci API will implement and deploy an API that calculates the n-th Fibonacci number
 for a given input number n. 
 
-Documentation available [Docs](/home/fateme/Documents/job/flixbus/fibonacci_api_project/docs/_build/html/index.html)
+📖 Documentation is available at [Docs](docs/_build/html/index.html)
 
-Look how easy it is to use:
 
 Start the server on your localhost by building a docker image and run it:
 
@@ -19,6 +18,9 @@ You can now find the n-th fibonacci number by sending a request to the server:
 
     curl http://0.0.0.0:81/?n=7
 
+OR
+
+    curl http://0.0.0.0:81/iterative/?n=7
 
 
 Installation
@@ -29,6 +31,13 @@ Install project from source by running:
     cd fibonacci_api_peoject
     pip install -r requirements.txt
     uvicorn src.fib.main:app --host 0.0.0.0 --port 81 --reload
+
+API Endpoints
+-------------
+[`GET /`] This endpoint uses the recursive algorithm to find the n-th number of the series.
+
+[`GET /iterative`] This endpoint uses the iterative algorithm to find the n-th number of the series.
+
 
 Contribute
 ----------
