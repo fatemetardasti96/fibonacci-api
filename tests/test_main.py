@@ -10,3 +10,8 @@ def test_read_index():
     assert resp.status_code == 200
     assert resp.json() == 13
 
+
+def test_bad_request():
+    resp = client.get("/?n=-7")
+    assert resp.status_code == 400
+    assert resp.json()["detail"] == "Enter Integer!"
