@@ -26,7 +26,7 @@ OR
 Installation
 ------------
 
-Install project from source by running:
+Install project from source in a fresh virtual environment by running:
 
     cd fibonacci_api_peoject
     pip install -r requirements.txt
